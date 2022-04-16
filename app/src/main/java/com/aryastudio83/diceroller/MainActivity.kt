@@ -11,9 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rollButton: Button = findViewById(R.id.button)
-        rollButton.setOnClickListener{
-            rollDice()
-        }
+        rollButton.setOnClickListener { rollDice() }
     }
 
     private fun rollDice() {
@@ -23,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         resultTextView.text = diceRoll.toString()
     }
 }
+
 class Dice(private val numSides: Int) {
     fun roll(): Int {
         return (1..numSides).random()
